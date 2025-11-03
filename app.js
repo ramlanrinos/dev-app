@@ -6,6 +6,8 @@ app.get('/', (req, res) => {
     res.send("Welcome to the app from DevOps!");
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });
+
+module.exports = {app, server};
